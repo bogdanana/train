@@ -1,8 +1,22 @@
 package train;
 
-public class Main {
+
+import java.util.Arrays;
+
+public class Main<array, myArray> {
+
 
     public static void main(String[] args) {
+
+        /*
+         System.out.println("enter your name:");
+         Scanner scanner = new Scanner(System.in);
+         String str = scanner.nextLine();
+         System.out.println(str + " hello");
+*/
+
+
+
 /*
         // if Prime number
 
@@ -61,6 +75,7 @@ public class Main {
             System.out.println("value: " + numbers[i]);
         }
 */
+/*
         //massive with for each cycle
         int nums [] = new int [10];
         int k = 0;
@@ -82,7 +97,7 @@ public class Main {
                 o++;
             }
 
-
+*/
 
 
 
@@ -106,6 +121,112 @@ public class Main {
             }
         System.out.println("Sum:" + sum);
 */
+/*
+    private void swap(int[] array, int ind1, int ind2) {
+        int tmp = array[ind1];
+        array[ind1] = array[ind2];
+        array[ind2] = tmp;
     }
-}
+    int[] array = {10, 2, 10, 3, 1, 2, 5};
+        System.out.println(Arrays.toString(array));
+        for (int i = 1; i < array.length; i++) {
+                if (array[i] < array[i - 1]) {
+                    swap(array, i, i-1);
+                }
+            }
+        System.out.println(Arrays.toString(array));
+            int[] array = {10, 2, 10, 3, 1, 2, 5};
+        System.out.println(Arrays.toString(array));
+            boolean needIteration = true;
+        while (needIteration) {
+                needIteration = false;
+                for (int i = 1; i < array.length; i++) {
+                    if (array[i] < array[i - 1]) {
+                        swap(array, i, i-1);
+                        needIteration = true;
+                    }
+                }
+            }
+        System.out.println(Arrays.toString(array));
+
+
+*/
+
+
+
+    /*
+    public static void bubSort(int[] arr){
+
+        for(int i = arr.length-1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i ; j++){
+
+                if( arr[j] > arr[j+1] ){
+                        int tmp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = tmp;
+                }
+            }
+        }
+    }
+*/
+    /*
+        void bubbleSort(int[] array) {
+            boolean sorted = false;
+            int temp;
+            while(!sorted) {
+                sorted = true;
+                for (int i = 0; i < array.length - 1; i++) {
+                    if (array[i] > array[i+1]) {
+                        temp = array[i];
+                        array[i] = array[i+1];
+                        array[i+1] = temp;
+                        sorted = false;
+                    }
+                }
+            }
+        }
+
+
+*/
+
+        int[] myArray;
+        myArray = new int[] {2, 5, 1, 3, 0, 10};
+        System.out.println(myArray);
+        System.out.println(Arrays.toString(myArray));
+        bubbleSort(myArray);
+
+    }
+
+    private static void bubbleSort(int[] array) {
+        boolean sorted = false;
+        int temp;
+        while (!sorted) {
+            sorted = true;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+                    sorted = false;
+                }
+
+
+                }
+
+            }
+        System.out.println(Arrays.toString(array));
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 

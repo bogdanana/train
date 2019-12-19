@@ -2,8 +2,9 @@ package train;
 
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Main<array, myArray> {
+public class Main<array, myArray, a> {
 
 
     public static void main(String[] args) {
@@ -154,49 +155,21 @@ public class Main<array, myArray> {
 
 
 
-    /*
-    public static void bubSort(int[] arr){
 
-        for(int i = arr.length-1 ; i > 0 ; i--){
-            for(int j = 0 ; j < i ; j++){
-
-                if( arr[j] > arr[j+1] ){
-                        int tmp = arr[j];
-                        arr[j] = arr[j+1];
-                        arr[j+1] = tmp;
-                }
-            }
-        }
-    }
-*/
-    /*
-        void bubbleSort(int[] array) {
-            boolean sorted = false;
-            int temp;
-            while(!sorted) {
-                sorted = true;
-                for (int i = 0; i < array.length - 1; i++) {
-                    if (array[i] > array[i+1]) {
-                        temp = array[i];
-                        array[i] = array[i+1];
-                        array[i+1] = temp;
-                        sorted = false;
-                    }
-                }
-            }
-        }
+        /*
 
 
-*/
-
+         */
+/*
         int[] myArray;
         myArray = new int[] {2, 5, 1, 3, 0, 10};
         System.out.println(myArray);
         System.out.println(Arrays.toString(myArray));
         bubbleSort(myArray);
+*/
 
-    }
-
+//bubble sorting
+    /*
     private static void bubbleSort(int[] array) {
         boolean sorted = false;
         int temp;
@@ -216,8 +189,45 @@ public class Main<array, myArray> {
             }
         System.out.println(Arrays.toString(array));
         }
+*/
+/*
+    public static void bubbleSort(int[] arr){
+
+        for(int i = arr.length-1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i ; j++){
+
+                if( arr[j] > arr[j+1] ){
+                        int tmp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = tmp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+
+*/
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter arr length:");
+        int arrLength = input.nextInt();
+        int[] arr = new int[arrLength];
+        /*
+        for (int i = 0; i < arrLength; i++) {
+            System.out.println("enter " + (i+1) + " element of array");
+            arr[i] = input.nextInt();
+        }
+        */
+        arr[0] = 0;
+
+        for (int i=1; i<arrLength-1; i++) {
+            int tmp;
+            arr[i+1] = arr [i] + arr [i-1];
+        }
+        System.out.println(Arrays.toString(arr));
 
     }
+}
 
 
 

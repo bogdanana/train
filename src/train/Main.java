@@ -7,8 +7,68 @@ import java.util.Scanner;
 public class Main<array, myArray, a> {
 
 
-    //public static void main(String[] args) {
+    public static void main(String[] args) {
 
+//array sorting
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter arr length:");
+        int arrLength = input.nextInt();
+        int[] arr = new int[arrLength];
+
+        for (int i = 0; i < arrLength; i++) {
+            System.out.println("enter " + (i + 1) + " element of array");
+            arr[i] = input.nextInt();
+        }
+
+        System.out.println(Arrays.toString(arr));
+
+        for (int i = arrLength-1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+
+        //fibonacci values---------------------------------
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter arr length:");
+        int arrLength = input.nextInt();
+        int[] arr = new int[arrLength];
+        int k = 0;
+        if (arrLength > 0) {
+            arr[0] = 0;
+            arr[1] = 1;
+            if (arrLength > 1) {
+                for (int i=2; i<arrLength; i++) {
+                    k = arr[i-1] + arr[i-2];
+                    arr[i] = k;
+                }
+                System.out.println(Arrays.toString(arr));
+            }
+        }
+    }
+
+    //found a value in the array----------------------------
+    Scanner input = new Scanner(System.in);
+        System.out.println("enter a value");
+    int x = input.nextInt();
+    int o = -1;
+    boolean found = false;
+    int[] myArr = {0, 3, 5, 8, 10, 12, 100, 1000};
+        while (!found) {
+        for (int i=0; i<myArr.length; i++) {
+            if (myArr[i] == x) {
+                found = true;
+                System.out.println(i);
+            }
+        }
+    }
+        if(found = false) System.out.println(o);
+}
         /*
          System.out.println("enter your name:");
          Scanner scanner = new Scanner(System.in);
@@ -288,48 +348,16 @@ if(i < high) qSort(A, i, high);
 
 
 /*
-//fibonacci values---------------------------------
-        Scanner input = new Scanner(System.in);
-        System.out.println("enter arr length:");
-        int arrLength = input.nextInt();
-        int[] arr = new int[arrLength];
-        int k = 0;
-        int m = 0;
-        int n = 0;
-        if (arrLength > 0) {
-            arr[0] = 0;
-            arr[1] = 1;
-             if (arrLength > 1) {
-                for (int i=2; i<arrLength; i++) {
-                    /*m = k;
-                    k = n;
-                    n = m+k;
-                    arr[i] = n;*/
-/*
-                    k = arr[i-1] + arr[i-2];
-                    arr[i] = k;
-                }
-                System.out.println(Arrays.toString(arr));
-            }
-        }
-    }
+
 */
-/*
-        Scanner input = new Scanner(System.in);
-        System.out.println("enter arr length:");
-        int arrLength = input.nextInt();
-        int[] arr = new int[arrLength];
-*/
+
+
 
 /*
 //fibonacci recursion----------------------------------
 static class Rec2 {
     public static void main(String[] args) {
-            /*Scanner input = new Scanner(System.in);
-            System.out.println("enter arr length:");
-            int arrLength = input.nextInt();
-            int[] arr = new int[arrLength];*/
-/*
+
         RecTest ob = new RecTest(10);
         int i;
         for (i = 0; i < 10; i++) {
@@ -405,6 +433,7 @@ static class Rec2 {
         }
     }
  */
+    }
 }
 
 

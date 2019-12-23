@@ -7,8 +7,53 @@ import java.util.Scanner;
 public class Main<array, myArray, a> {
 
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+       int[] initialArray = {5,1,4,75,43,-1,0,0,54,1000,2};
+       System.out.println(Arrays.toString(insertSort(initialArray)));
+/*
+        int a = 20;
+        a = a << 1;
+        a = a >> 3;
+        System.out.println(a);
 
+        int[] arr = {2, 5, 1, 6, 7, 1, 1, 4, 10};
+        */
+   }
+
+   public static int[] insertSort(int[] initialArray) {
+       int[] arr = initialArray;
+       for (int left = 1; left < arr.length; left++) {
+           int value = arr[left];
+           int i = left - 1;
+           for (; i >= 0; i--) {
+               if (value < arr[i]) {
+                   arr[i + 1] = arr[i];
+               } else {
+                   break;
+               }
+           }
+           arr[i + 1] = value;
+       }
+       return initialArray;
+   }
+
+
+
+
+        /*
+        for(int i=arr.length-1; i>0; i--) {
+            for(int j = 0; j<i; j++) {
+                if( arr[j] > arr [j+1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+*/
+
+/*
 //array sorting
         Scanner input = new Scanner(System.in);
         System.out.println("enter arr length:");
@@ -69,6 +114,9 @@ public class Main<array, myArray, a> {
     }
         if(found = false) System.out.println(o);
 }
+*/
+
+
         /*
          System.out.println("enter your name:");
          Scanner scanner = new Scanner(System.in);
@@ -284,7 +332,7 @@ for (int left = 0; left < array.length; left++) {
 	array[i + 1] = value;
 }
 System.out.println(Arrays.toString(array));
- */
+*/
 /*
 //Quick sort---------------------------------------
 public static void quickSort(int[] source, int leftBorder, int rightBorder) {
@@ -343,8 +391,8 @@ i++; j--;
 if(low < j) qSort(A, low, j);
 if(i < high) qSort(A, i, high);
 }
+*/
 
- */
 
 
 /*
@@ -434,7 +482,7 @@ static class Rec2 {
     }
  */
     }
-}
+
 
 
 

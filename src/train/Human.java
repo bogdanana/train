@@ -40,7 +40,6 @@ public class Human {
         public String toString() {
             return "chest, back, stomach...";
         }
-
     }
 
     public static class Limbs {

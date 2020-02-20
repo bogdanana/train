@@ -12,14 +12,6 @@ public class Main {
         int[] sortedArray = insertSort(initialArray);
         System.out.println(foundValue(sortedArray, 43));
         System.out.println(Arrays.toString(sortedArray));
-
-/*
-        int a = 20;
-        a = a << 1;
-        a = a >> 3;
-        System.out.println(a);
-        int[] arr = {2, 5, 1, 6, 7, 1, 1, 4, 10};
-        */
     }
 
     public static int[] insertSort(int[] initialArray) {

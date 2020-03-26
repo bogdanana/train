@@ -1,14 +1,31 @@
 package train;
 
+import java.util.*;
+import java.util.List;
+
 public class Parentheses {
+
 
     public static void main(String[] args) {
         Parentheses p = new Parentheses();
-        String s = "(())()()()((()";
+        String s = "(())()()()((()))";
         System.out.println(p.checker(s));
     }
 
-        public boolean checker(String s) {
+    public boolean checker(String s) {
+
+        Stack<Character> stack = new Stack();
+        for (int i = 0; i < s.length(); i++) {
+
+            if (s.charAt(i) == '(') stack.push(s.charAt(i));
+            else if(s.charAt(i) == ')'){
+                Character last = stack.pop();
+                if(last == null) return false;
+            }
+        }
+
+        return stack.empty();
+        /*
             boolean b = false;
             int l = s.length();
             int i, counti = 0, countj = 0;
@@ -34,13 +51,12 @@ public class Parentheses {
 
                             /*& s.charAt(j) == ')') b = true;
                         else if (s.charAt(i) == ')' & s.charAt(j) == '(') b = true;
-                        else b = false;*/
+                        else b = false;
                     }
-                }
-            if (s.charAt(0) == ')' || s.charAt(l - 1) == '(') b = false;
-            if (l%2 != 0) b = false;
-            return b;
-        }
+                }*/
+
+    }
+
 
 }
 

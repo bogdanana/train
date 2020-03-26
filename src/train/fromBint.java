@@ -3,13 +3,16 @@ package train;
 import java.util.Random;
 
 public class fromBint {
-    private static boolean b;
+
 
     public static void main(String[] args) {
         //GoodBohdana g = new GoodBohdana();
         BadBohdana y = new BadBohdana();
         //print(g);
-        y.Say(b);
+        for(int i=0; i < 10; i++){
+            y.Say();
+        }
+
         print(y);
 
     }
@@ -31,16 +34,16 @@ public class fromBint {
 }
 */
 class BadBohdana implements Bohdana {
-
+    Random r = new Random();
     @Override
     public boolean Next() {
-        Random r = new Random();
+
         return r.nextBoolean();
     }
 
     @Override
-    public void Say(boolean Next) {
-        if (Next=true) {
+    public void Say() {
+        if (Next()) {
             System.out.println("No.");
         } else System.out.println(".");
     }

@@ -14,9 +14,9 @@ public class txtReader {
         int x = 0;
         for (int i=0; i < text.size(); i++) {
             String tmp = text.get(i);
-            String[] splited = tmp.split(" ");
-            for (int j=0; j<splited.length; j++) {
-                if (splited[j].equalsIgnoreCase("sample") || splited[j].equalsIgnoreCase("sample.")) {
+            String[] split = tmp.split(" ");
+            for (int j=0; j<split.length; j++) {
+                if (split[j].equalsIgnoreCase("sample") || split[j].equalsIgnoreCase("sample.")) {
                     x++;
                 }
             }

@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         int[] initialArray = {5, 1, 4, 75, 43, -1, 0, 0, 54, 1000, 2};
-        int[] sortedArray = insertSort(initialArray);
+        int[] sortedArray = bubbleSort(initialArray);
         System.out.println(foundValue(sortedArray, 43));
         System.out.println(Arrays.toString(sortedArray));
     }
@@ -32,7 +32,7 @@ public class Main {
     public static int[] bubbleSort(int[] initialArray) {
         int[] arr = initialArray;
         for (int i = arr.length - 1; i > 0; i--) {
-            for (int j = 0; j < 1; j++) {
+            for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int tmp = arr[j];
                     arr[j] = arr[j + 1];

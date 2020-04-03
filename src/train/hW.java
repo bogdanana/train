@@ -1,5 +1,6 @@
 package train;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class hW {
@@ -11,7 +12,8 @@ public class hW {
         System.out.println(check(value));
         int[] arr = {10, 9, 8, 1, 7, 6, 5, 4, 3, 2};
         System.out.println(minVal(arr));
-        System.out.println(fact(value));
+        System.out.println(fib(value));
+        System.out.println(alg(value));
 
     }
     public static String check(int value) {
@@ -33,11 +35,36 @@ public class hW {
         return arr[0];
     }
 
-    public static int fact(int value) {
-            int result;
-            if(value == 1) return 1;
-            result = fact(value - 1) * value;
-            return result;
+    public static int alg(int value) {
+        int pow = value*value;
+
+        int len = Integer.toString(pow).length();
+        int[] arr = new int[len];
+        for(int j=0; pow >0; j++) {
+            arr[len-1-j] = pow%10;
+            pow=pow/10;
+        }
+
+        for (int i = 0; i < arr.length/2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[arr.length -1 - i];
+            arr[arr.length -1 - i] = temp;
+        }
+
+        int result = 0;
+        for( int temp=0; temp < arr.length; temp++){
+            result*=10;
+            result+=arr[temp];
+        }
+        return result;
+    }
+
+
+    public static int fib(int n) {
+        if(n>1)
+            return fib(n-2) + fib(n-1);
+        else
+            return n;
     }
 
 
